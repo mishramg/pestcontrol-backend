@@ -22,13 +22,13 @@ mongoose.connect(process.env.MONGO_URI)
     if (!adminExists) {
       const defaultAdmin = new User({
         name: 'Gaurav (Master)',
-        username: 'admin',
-        password: 'admin123',
+        username: 'admin1',
+        password: 'admin1234',
         phone: '0000000000',
         role: 'ADMIN'
       });
       await defaultAdmin.save();
-      console.log('👑 Default Admin created! Username: admin | Password: admin123');
+      console.log('👑 Default Admin created! Username: admin1 | Password: admin1234');
     }
   })
   .catch((err) => console.error('❌ MongoDB Error:', err));
